@@ -25,7 +25,24 @@ const Hero = () => {
               {link.label}
             </a>
           ))}
-          <a className="button button--ghost" href="#projects">
+          <a
+            className="button button--ghost"
+            href="#open-source-research"
+            onClick={(e) => {
+              e.preventDefault();
+              const element = document.getElementById("open-source-research");
+              if (element) {
+                const navHeight = 70;
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition =
+                  elementPosition + window.pageYOffset - navHeight;
+                window.scrollTo({
+                  top: Math.max(0, offsetPosition),
+                  behavior: "smooth",
+                });
+              }
+            }}
+          >
             Explore projects
           </a>
         </div>

@@ -1,3 +1,8 @@
+// Helper to get image path with base URL for GitHub Pages
+const getImagePath = (path) => {
+  return import.meta.env.BASE_URL + path.replace(/^\//, "");
+};
+
 export const profile = {
   name: "Karim Elkobrossy",
   role: "Machine Learning Engineer & Author",
@@ -6,7 +11,7 @@ export const profile = {
     "3+ years of hands-on experience in cloud computing, ML, and software engineering. Strong foundation in computer science principles and large-scale system design.",
     "Experienced in building scalable cloud-native applications, integrating machine learning pipelines, and optimizing LLM-based systems. Passionate about research-driven development and transforming complex AI concepts into high-impact solutions.",
   ],
-  avatar: "/images/karim-elkobrossy.jpg",
+  avatar: getImagePath("/images/karim-elkobrossy.jpg"),
   socialLinks: [
     {
       label: "LinkedIn",
@@ -32,7 +37,7 @@ export const projectGroups = [
       {
         id: "medagentbench-evaluation",
         title: "Advanced Evaluation Framework for Medical AI Agents",
-        image: "/images/Agentified-MedAgentBench.jpg",
+        image: getImagePath("/images/Agentified-MedAgentBench.jpg"),
         imageAlt: "MedAgentBench evaluation framework architecture",
         tags: [
           "Python",
@@ -88,7 +93,7 @@ export const projectGroups = [
         title:
           "Data Pruning for Cost-Efficient Training in Tribological Analysis on Journal Bearing Systems – Rolls Royce",
         status: "Upcoming publication",
-        image: "/images/journal-bearing.jpg",
+        image: getImagePath("/images/journal-bearing.jpg"),
         imageAlt: "Rendering of journal bearing components",
         tags: ["Python", "Deep Learning", "Autoencoder", "DBSCAN", "Research"],
         description:
@@ -135,7 +140,7 @@ export const projectGroups = [
         id: "tanzania-water-pumps",
         title:
           "Predictive modelling for the forecasting of water pumps functionality (Tanzania case study)",
-        image: "/images/water-pump.png",
+        image: getImagePath("/images/water-pump.png"),
         imageAlt: "Illustration of a water pump in Tanzania",
         tags: [
           "Python",
@@ -167,7 +172,7 @@ export const projectGroups = [
       {
         id: "feature-selection-comparison",
         title: "A Comparative Study of Feature Selection Techniques",
-        image: "/images/big-data.jpg",
+        image: getImagePath("/images/big-data.jpg"),
         imageAlt: "Abstract visualization of big data",
         tags: [
           "Python",
@@ -201,7 +206,7 @@ export const projectGroups = [
       {
         id: "ai-uno-game",
         title: "AI-powered UNO game",
-        image: "/images/uno-logo.png",
+        image: getImagePath("/images/uno-logo.png"),
         imageAlt: "UNO game logo",
         tags: ["Python", "OOP", "AI", "Game Development"],
         highlights: [
@@ -224,7 +229,7 @@ export const projectGroups = [
       {
         id: "police-workforce-site",
         title: "Police Workforce Website",
-        image: "/images/police.jpg",
+        image: getImagePath("/images/police.jpg"),
         imageAlt: "Police patrol car at night",
         tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "Full Stack"],
         description:
